@@ -168,9 +168,8 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increase minmax value */
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .service-card {
@@ -185,6 +184,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  max-width: 100%; /* Optional: set a max-width or remove width restrictions */
 }
 
 .service-card:hover {
