@@ -237,7 +237,7 @@ body {
 .about-text p {
   font-size: 1.1rem;
   color: var(--text-light);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Added margin-bottom */
   line-height: 1.8;
 }
 
