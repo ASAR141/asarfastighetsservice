@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  max-width: 1400px; /* was 1200px */
+  max-width: 1800px; /* Increase this for more space */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -168,7 +168,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); /* was 350px */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Make cards wider */
   gap: 2rem;
 }
 
@@ -185,7 +185,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* max-width: 100%;  Optional: set a max-width or remove width restrictions */
+  max-width: 100%; /* Optional: set a max-width or remove width restrictions */
 }
 
 .service-card:hover {
@@ -217,7 +217,7 @@ body {
 }
 
 .service-card p {
-  color: var(--text-dark); /* Higher contrast */
+  color: var(--text-light); /* Higher contrast */
   line-height: 1.7;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
