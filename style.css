@@ -181,10 +181,11 @@ body {
   transition: var(--transition);
   border: 1px solid #e9ecef;
   min-height: 370px;     /* Optional: make cards taller for more text */
+  min-width: 400px; /* Optional: set a min-width for cards */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 120%; /* Optional: set a max-width or remove width restrictions */
+  max-width: 100%; /* Optional: set a max-width or remove width restrictions */
 }
 
 .service-card:hover {
