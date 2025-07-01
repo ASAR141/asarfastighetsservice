@@ -168,7 +168,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Make cards wider */
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Make cards wider */
   gap: 2rem;
 }
 
@@ -180,8 +180,8 @@ body {
   box-shadow: var(--shadow);
   transition: var(--transition);
   border: 1px solid #e9ecef;
-  min-height: 400px;     /* Optional: make cards taller for more text */
-  min-width: 400px; /* Optional: set a min-width for cards */
+  min-height: 450px;     /* Optional: make cards taller for more text */
+  min-width: 450px; /* Optional: set a min-width for cards */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
