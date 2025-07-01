@@ -184,7 +184,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 100%; /* Optional: set a max-width or remove width restrictions */
+  max-width: 120%; /* Optional: set a max-width or remove width restrictions */
 }
 
 .service-card:hover {
