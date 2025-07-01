@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px; /* was 1200px */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -168,7 +168,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increase minmax value */
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); /* was 350px */
   gap: 2rem;
 }
 
