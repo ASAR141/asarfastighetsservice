@@ -212,6 +212,7 @@ body {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: var(--primary-color);
+  text-align: center; /* Center the heading */
 }
 
 .service-card p {
