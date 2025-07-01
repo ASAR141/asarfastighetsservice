@@ -236,7 +236,7 @@ body {
 
 .about-text p {
   font-size: 1.1rem;
-  color: var(--text-dark); /* Changed from --text-light to --text-dark */
+  color: #222; /* Strong dark color for high contrast */
   margin-bottom: 1.5rem;
   line-height: 1.8;
 }
