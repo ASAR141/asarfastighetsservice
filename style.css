@@ -180,8 +180,8 @@ body {
   box-shadow: var(--shadow);
   transition: var(--transition);
   border: 1px solid #e9ecef;
-  min-height: 400px;     /* Optional: make cards taller for more text */
-  min-width: 400px; /* Optional: set a min-width for cards */
+  min-height: 420px;     /* Optional: make cards taller for more text */
+  min-width: 420px; /* Optional: set a min-width for cards */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
