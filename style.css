@@ -168,7 +168,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Make cards wider */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Make cards wider */
   gap: 2rem;
 }
 
