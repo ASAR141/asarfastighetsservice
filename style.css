@@ -86,11 +86,11 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 50vh; /* Changed from 100vh to 50vh */
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 80px 2rem 0 2rem; /* Add top padding for fixed header */
   background: linear-gradient(135deg, var(--bg-light) 0%, #ecf0f1 100%);
   text-align: center;
 }
