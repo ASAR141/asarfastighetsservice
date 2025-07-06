@@ -90,7 +90,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 180px 2rem 120px 2rem; /* Same padding top and bottom */
+  padding: 200px 2rem 120px 2rem; /* Same padding top and bottom */
   background: linear-gradient(135deg, var(--bg-light) 0%, #ecf0f1 100%);
   text-align: center;
 }
