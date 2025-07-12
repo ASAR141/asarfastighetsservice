@@ -76,7 +76,7 @@ body {
   background: var(--secondary-color); /* Change background on hover */
   color: var(--white); /* Change text color on hover */
   transform: translateY(-2px); /* Add a subtle lift effect */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow on hover */
   text-decoration: none; /* Remove underline on hover */
 }
 
