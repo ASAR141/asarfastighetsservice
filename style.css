@@ -12,6 +12,7 @@
   --text-dark: #28394b;
   --text-light: #293131;
   --bg-light: #f8f9fa;
+  --button-light: #e1e2e4;
   --white: #ffffff;
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
@@ -61,13 +62,22 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 500;
-  transition: var(--transition);
+  color: var(--primary-color); /* Use primary color for text */
+  background: var(--bg-ligh); /* Add a light background */
+  font-weight: 600; /* Make it a bit bolder */
+  padding: 0.6rem 1.2rem; /* Increase padding slightly */
+  border-radius: 5px; /* Add a small border-radius */
+  box-shadow: 0 8px 2px rgba(0, 0, 0, 0.15); /* Add a subtle box*/
+  transition: var(--transition); /* Keep transition for hover */
+  letter-spacing: normal; /* Keep normal letter spacing */
 }
 
 .nav-link:hover {
-  color: var(--secondary-color);
+  background: var(--secondary-color); /* Change background on hover */
+  color: var(--white); /* Change text color on hover */
+  transform: translateY(-2px); /* Add a subtle lift effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+  text-decoration: none; /* Remove underline on hover */
 }
 
 .hamburger {
