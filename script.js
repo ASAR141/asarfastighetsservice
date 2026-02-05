@@ -1,6 +1,7 @@
 // script.js
 
-document.addEventListener("DOMContentLoaded", function () {
+// Wait for EmailJS library to load before initializing
+function initializeApp() {
 	// Initialize EmailJS with your public key
 	emailjs.init("s6i8i7zTEYmrDpHLw"); // Replace with your actual public key from EmailJS
 
@@ -81,6 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			};
 
 			// Send email using EmailJS
+			console.log("Attempting to send email with params:", templateParams);
+			console.log("Service ID:", "service_493cqki");
+			console.log("Template ID:", "template_u2rfk19");
+
 			emailjs
 				.send(
 					"service_493cqki", // Replace with your EmailJS service ID
@@ -90,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				.then(
 					function (response) {
 						// Success
+						console.log("EmailJS success:", response);
 						alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
 						contactForm.reset();
 						submitBtn.textContent = originalText;
@@ -97,14 +103,46 @@ document.addEventListener("DOMContentLoaded", function () {
 					},
 					function (error) {
 						// Error
-						console.error("EmailJS error:", error);
+						console.error("EmailJS error details:", error);
+						console.error("Error status:", error.status);
+						console.error("Error text:", error.text);
 						alert(
-							"Det uppstod ett fel när meddelandet skulle skickas. Vänligen försök igen senare eller kontakta oss direkt."
+							"Det uppstod ett fel när meddelandet skulle skickas. Vänligen försök igen senare eller kontakta oss direkt. Fel: " + (error.status || error.text || "Okänt fel")
 						);
 						submitBtn.textContent = originalText;
 						submitBtn.disabled = false;
 					}
-				);
+				)
+				.catch(function (catchError) {
+					// Catch any other errors
+					console.error("EmailJS catch error:", catchError);
+					alert("Ett oväntat fel uppstod. Vänligen försök igen senare.");
+					submitBtn.textContent = originalText;
+					submitBtn.disabled = false;
+				});
 		});
+	}
+}
+
+// Wait for DOM to be ready and EmailJS library to load
+document.addEventListener("DOMContentLoaded", function () {
+	// Check if emailjs is available, if not wait for it
+	if (typeof emailjs !== "undefined") {
+		initializeApp();
+	} else {
+		// Wait for emailjs to load (with timeout)
+		let attempts = 0;
+		const maxAttempts = 50; // 5 seconds with 100ms intervals
+		const waitForEmailJS = setInterval(function () {
+			attempts++;
+			if (typeof emailjs !== "undefined") {
+				clearInterval(waitForEmailJS);
+				initializeApp();
+			} else if (attempts >= maxAttempts) {
+				clearInterval(waitForEmailJS);
+				console.error("EmailJS library failed to load after 5 seconds");
+				alert("Kontaktformuläret är inte tillgängligt för tillfället. Vänligen försök igen senare.");
+			}
+		}, 100);
 	}
 });
